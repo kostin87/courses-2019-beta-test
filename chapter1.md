@@ -92,7 +92,7 @@ success_msg("Отлично!")
 
 ---
 
-## Insert exercise title here
+## Результаты регрессии1
 
 ```yaml
 type: MultipleChoiceExercise
