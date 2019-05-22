@@ -1,4 +1,6 @@
 library(remotes)
+install.packages('timeSeries')
+install.packages("PerformanceAnalytics")
 library(timeSeries)
 library(PerformanceAnalytics)
 
