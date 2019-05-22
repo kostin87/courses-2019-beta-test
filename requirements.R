@@ -1,6 +1,6 @@
 library(remotes)
-library('timeSeries')
-library("PerformanceAnalytics")
+library(timeSeries)
+library(PerformanceAnalytics)
 
 ##### Install specific package versions from CRAN #####
 
