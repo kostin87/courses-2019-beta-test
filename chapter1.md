@@ -4,6 +4,52 @@ description: 'Chapter description goes here.'
 free_preview: true
 ---
 
+## Отрисовка графиков
+
+```yaml
+type: NormalExercise
+key: 4b9400d745
+xp: 100
+```
+
+
+
+`@instructions`
+- У вас есть случайная величина x.
+- Постройте её линеный график 
+- Добавьте на график линию y зеленого цвета
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+x=rnorm(100,0,5)+1:100
+y=rnorm(100,0,5)+1:100
+```
+
+`@sample_code`
+```{r}
+x
+y
+```
+
+`@solution`
+```{r}
+plot(x,type='l')
+lines(y,col='green')
+```
+
+`@sct`
+```{r}
+ex() %>% check_function("plot") %>% {
+  check_arg(., "x") %>% check_equal()
+ex() %>% check_function("lines") %>% {
+  check_arg(., "y") %>% check_equal()
+```
+
+---
+
 ## Отрисовка гистограмм
 
 ```yaml
