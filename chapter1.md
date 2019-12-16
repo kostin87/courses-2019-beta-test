@@ -42,10 +42,8 @@ lines(y,col='green')
 
 `@sct`
 ```{r}
-ex() %>% {
-  check_function("plot") %>% check_result() %>% check_equal()
-  check_function("lines") %>% check_result() %>% check_equal()
-}
+ex() %>% check_function("plot") %>% check_result() %>% check_equal()
+
 success_msg("Отлично!")
 ```
 
