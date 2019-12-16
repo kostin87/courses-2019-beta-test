@@ -201,7 +201,7 @@ xp: 50
 ```{r}
 x=rnorm(10000)
 y=x+rnorm(10000,1,100)
-z=x+rnorm(10000,0,5)>3
+z=factor(x+rnorm(10000,0,5)>3)
 fit=lm(x~y+z)
 ```
 
@@ -239,7 +239,7 @@ xp: 50
 ```{r}
 x=rnorm(10000)
 y=x+rnorm(10000,1,100)
-z=x+rnorm(10000,0,5)>3
+z=factor(x+rnorm(10000,0,5)>3)
 fit=lm(x~y+z)
 ```
 
@@ -277,7 +277,7 @@ xp: 50
 ```{r}
 x=rnorm(10000)
 y=x+rnorm(10000,1,100)
-z=x+rnorm(10000,0,5)>3
+z=factor(x+rnorm(10000,0,5)>3)
 fit=lm(x~y+z)
 ```
 
@@ -316,7 +316,7 @@ xp: 50
 ```{r}
 x=rnorm(10000)
 y=x+rnorm(10000,1,100)
-z=x+rnorm(10000,0,5)>3
+z=factor(x+rnorm(10000,0,5)>3)
 fit=lm(x~y+z)
 ```
 
