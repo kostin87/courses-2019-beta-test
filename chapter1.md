@@ -136,6 +136,95 @@ success_msg("Отлично!")
 
 ---
 
+## Таблица сопряженности
+
+```yaml
+type: NormalExercise
+key: a8da81733e
+lang: r
+xp: 100
+skills: 1
+```
+
+
+
+`@instructions`
+- У вас есть две фиктивные переменные x и y.
+- Постройте таблицу z сопряженности этих переменных.
+
+`@hint`
+Используйте функцию table.
+
+`@pre_exercise_code`
+```{r}
+x=round(round(runif(10000)))
+y=round(round(runif(10000)))
+```
+
+`@sample_code`
+```{r}
+z=
+```
+
+`@solution`
+```{r}
+z=table(x,y)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("z") %>% check_equal()
+success_msg("Отлично!")
+```
+
+---
+
+## Таблица сопряженности2
+
+```yaml
+type: NormalExercise
+key: 48c8962e67
+lang: r
+xp: 100
+skills: 1
+```
+
+
+
+`@instructions`
+- У вас есть таблица сопряженности z
+- Проверьте с помощью теста Хи-квадрат наличие зависимость между переменными в случае если вы выбрали 5% квантиль.
+
+`@hint`
+Используйте функцию table.
+
+`@pre_exercise_code`
+```{r}
+x=round(round(runif(10000)))
+y=round(round(runif(10000)))
+z=table(x,y)
+z[1,1]=z[1,1]+200
+```
+
+`@sample_code`
+```{r}
+(z)
+```
+
+`@solution`
+```{r}
+chisq.test(z)
+```
+
+`@sct`
+```{r}
+ex() %>% check_function("chisq.test") %>% check_result() %>% check_equal()
+
+success_msg("Отлично!")
+```
+
+---
+
 ## Линейная регрессия
 
 ```yaml
