@@ -44,8 +44,7 @@ lines(y,col='green')
 ```{r}
 ex() %>% {
   check_function("plot") %>% check_result() %>% check_equal()
-}
-    check_function("lines") %>% check_result() %>% check_equal()
+  check_function("lines") %>% check_result() %>% check_equal()
 }
 success_msg("Отлично!")
 ```
