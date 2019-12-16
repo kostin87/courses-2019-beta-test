@@ -180,6 +180,52 @@ success_msg("Отлично!")
 
 ---
 
+## Линейная регрессия 2
+
+```yaml
+type: NormalExercise
+key: 61661ae339
+lang: r
+xp: 100
+skills: 1
+```
+
+
+
+`@instructions`
+- Постройте линейную регрессию x от y и z (фиктивная переменная) и запишите ее в переменную fit.
+- Выведите расширенную версию таблицы отчета
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+x=rnorm(10000)
+y=x+rnorm(10000,1,1.5)
+z=factor(x>2)
+```
+
+`@sample_code`
+```{r}
+fit=
+...(fit)
+```
+
+`@solution`
+```{r}
+fit=lm(x~y+z)
+summary(fit)
+```
+
+`@sct`
+```{r}
+ex() %>% check_function("summary") %>% check_result() %>% check_equal()
+success_msg("Отлично!")
+```
+
+---
+
 ## Результаты регрессии1
 
 ```yaml
