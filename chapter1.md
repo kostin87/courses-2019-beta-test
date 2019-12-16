@@ -16,6 +16,48 @@ xp: 100
 
 `@instructions`
 - У вас есть случайная величина x.
+- Постройте её линеный график
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+x=rnorm(100,0,5)+1:100
+y=rnorm(100,0,5)+1:100
+```
+
+`@sample_code`
+```{r}
+x
+```
+
+`@solution`
+```{r}
+plot(x,type='l')
+```
+
+`@sct`
+```{r}
+ex() %>% check_function("plot") %>% check_result() %>% check_equal()
+
+success_msg("Отлично!")
+```
+
+---
+
+## Отрисовка линий
+
+```yaml
+type: NormalExercise
+key: 201ee5e603
+xp: 100
+```
+
+
+
+`@instructions`
+- У вас есть случайная величина x.
 - Постройте её линеный график 
 - Добавьте на график линию y зеленого цвета
 
@@ -42,7 +84,7 @@ lines(y,col='green')
 
 `@sct`
 ```{r}
-ex() %>% check_function("plot") %>% check_result() %>% check_equal()
+ex() %>% check_function("lines") %>% check_result() %>% check_equal()
 
 success_msg("Отлично!")
 ```
