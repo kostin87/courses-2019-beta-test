@@ -4,7 +4,7 @@ description: 'Chapter description goes here.'
 free_preview: true
 ---
 
-## Отрисовка графиков
+## Отрисовка графиков 2
 
 ```yaml
 type: NormalExercise
